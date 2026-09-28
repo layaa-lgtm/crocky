@@ -768,24 +768,39 @@
   function renderCrocodile() {
     let mode = 'happy';
 
-    // Neutral expression ONLY until user selects a goal as completed
+    // Streak ended / missed day
     if (state.isMissedDayPenaltyActive) {
       mode = 'dull';
+
+    // Rest day
     } else if (state.todayMode === 'rest') {
       mode = 'rest';
+
+    // Goal / working day
     } else {
       mode = 'happy';
     }
 
-    if (el.crocoSvgWrapper) {
-      el.crocoSvgWrapper.innerHTML = getCrocodileSVG(mode);
+    // Use the appropriate GIF
+    if (el.crocoImage) {
+      if (mode === 'dull') {
+        el.crocoImage.src = 'assets/Tired_Crocky.gif';
+      } else if (mode === 'rest') {
+        el.crocoImage.src = 'assets/Rest_Crocky.gif';
+      } else {
+        el.crocoImage.src = 'assets/Happy_Crocky.gif';
+      }
     }
 
-    if (el.speechCrocoName) el.speechCrocoName.textContent = state.crocoName || "Crocodile";
+    if (el.speechCrocoName) {
+      el.speechCrocoName.textContent = state.crocoName || "Crocodile";
+    }
 
     const pool = DIALOGUES[mode] || DIALOGUES.happy;
+
     if (!el.speechQuoteText.textContent || state.isMissedDayPenaltyActive) {
-      el.speechQuoteText.textContent = `"${pool[Math.floor(Math.random() * pool.length)]}"`;
+      el.speechQuoteText.textContent =
+        `"${pool[Math.floor(Math.random() * pool.length)]}"`;
     }
   }
 
