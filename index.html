@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Adaptive Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-viewport-wrapper">
+    
+    <!-- Mobile Device Container -->
+    <main class="mobile-device-container" id="mobileContainer">
+
+      <!-- ========================================== -->
+      <!-- SCREEN 1: ONBOARDING FLOW                  -->
+      <!-- ========================================== -->
+      <section class="screen onboarding-screen" id="onboardingScreen">
+        
+        <div class="onboarding-progress-bar">
+          <div class="progress-fill" id="onboardingProgressFill" style="width: 14%;"></div>
+        </div>
+
+        <div class="onboarding-card">
+          <!-- Step 1: Activities (Nothing preselected) -->
+          <div class="onboarding-step active" id="stepActivities">
+            <h2 class="step-title">What activities are you interested in?</h2>
+            <p class="step-desc">Select one or more fitness activities.</p>
+
+            <div class="bubble-cloud" id="bubbleActivities">
+              <button type="button" class="choice-bubble" data-value="walking">Gentle Walking</button>
+              <button type="button" class="choice-bubble" data-value="yoga">Stretching & Yoga</button>
+              <button type="button" class="choice-bubble" data-value="bodyweight">Light Bodyweight Moves</button>
+              <button type="button" class="choice-bubble" data-value="cycling">Cycling</button>
+              <button type="button" class="choice-bubble" data-value="dancing">Dance Movement</button>
+              <button type="button" class="choice-bubble" data-value="mobility">Mobility & Posture</button>
+              <button type="button" class="choice-bubble" data-value="swimming">Swimming</button>
+              <button type="button" class="choice-bubble" data-value="nature">Nature Strolls</button>
+            </div>
+
+            <div class="step-actions">
+              <button type="button" class="btn-primary" id="btnNextActivities" disabled>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Why (Nothing preselected) -->
+          <div class="onboarding-step" id="stepWhy">
+            <h2 class="step-title">Why do you want to pursue this activity?</h2>
+            <p class="step-desc">Select your primary reason.</p>
+
+            <div class="bubble-cloud" id="bubbleWhy">
+              <button type="button" class="choice-bubble" data-value="consistency">Build consistency</button>
+              <button type="button" class="choice-bubble" data-value="energy">More daily energy</button>
+              <button type="button" class="choice-bubble" data-value="mental">Clear mental clutter</button>
+              <button type="button" class="choice-bubble" data-value="sleep">Better sleep</button>
+              <button type="button" class="choice-bubble" data-value="pain_free">Move pain-free</button>
+              <button type="button" class="choice-bubble" data-value="reconnect">Reconnect with body</button>
+            </div>
+
+            <div class="step-actions split">
+              <button type="button" class="btn-secondary" id="btnBackWhy">Back</button>
+              <button type="button" class="btn-primary" id="btnNextWhy" disabled>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Struggle (Nothing preselected) -->
+          <div class="onboarding-step" id="stepStruggle">
+            <h2 class="step-title">What do you struggle with the most in this activity?</h2>
+            <p class="step-desc">Select what you want to work on.</p>
+
+            <div class="bubble-cloud" id="bubbleStruggle">
+              <button type="button" class="choice-bubble" data-value="burnout">Starting too fast and burning out</button>
+              <button type="button" class="choice-bubble" data-value="consistency">Staying consistent after a few days</button>
+              <button type="button" class="choice-bubble" data-value="guilt">Guilt when missing a day</button>
+              <button type="button" class="choice-bubble" data-value="low_energy">Low energy after work</button>
+              <button type="button" class="choice-bubble" data-value="perfectionism">All-or-nothing mindset</button>
+              <button type="button" class="choice-bubble" data-value="guidance">Knowing where to start</button>
+            </div>
+
+            <div class="step-actions split">
+              <button type="button" class="btn-secondary" id="btnBackStruggle">Back</button>
+              <button type="button" class="btn-primary" id="btnNextStruggle" disabled>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 4: Tracker Linking (Nothing preselected) -->
+          <div class="onboarding-step" id="stepTracker">
+            <h2 class="step-title">Link smart-device or health tracker</h2>
+            <p class="step-desc">Data from your tracker will help personalize your weekly routine.</p>
+
+            <div class="tracker-options" id="trackerOptionsList">
+              <button type="button" class="tracker-item" data-value="apple_health">
+                <span class="tracker-title">Apple Health</span>
+              </button>
+              <button type="button" class="tracker-item" data-value="google_fit">
+                <span class="tracker-title">Google Fit</span>
+              </button>
+              <button type="button" class="tracker-item" data-value="fitbit">
+                <span class="tracker-title">Fitbit</span>
+              </button>
+              <button type="button" class="tracker-item" data-value="garmin">
+                <span class="tracker-title">Garmin</span>
+              </button>
+              <button type="button" class="tracker-item" data-value="whoop">
+                <span class="tracker-title">WHOOP / Oura</span>
+              </button>
+              <button type="button" class="tracker-item" data-value="manual">
+                <span class="tracker-title">Manual / Skip for now</span>
+              </button>
+            </div>
+
+            <div class="step-actions split">
+              <button type="button" class="btn-secondary" id="btnBackTracker">Back</button>
+              <button type="button" class="btn-primary" id="btnNextTracker" disabled>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 5: Introduce Companion & Name Entry (No suggested names!) -->
+          <div class="onboarding-step" id="stepCompanionIntro">
+            <div class="companion-intro-visual">
+              <div class="croco-svg-box" id="introCrocoAvatar"></div>
+            </div>
+
+            <h2 class="step-title">Meet your wellness companion</h2>
+            <p class="step-desc">Your companion is a crocodile who supports you through goal days and rest days.</p>
+
+            <div class="form-field">
+              <label for="inputUserName" class="field-label">Your Name</label>
+              <input type="text" id="inputUserName" class="text-input" placeholder="Enter your name" autocomplete="off">
+            </div>
+
+            <div class="form-field">
+              <label for="inputCrocoName" class="field-label">Name your crocodile</label>
+              <input type="text" id="inputCrocoName" class="text-input" placeholder="Enter crocodile name" autocomplete="off">
+            </div>
+
+            <div class="step-actions split">
+              <button type="button" class="btn-secondary" id="btnBackCompanion">Back</button>
+              <button type="button" class="btn-primary" id="btnNextCompanion" disabled>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 6: Choose Goal Days & Rest Days for Week (BEFORE goals are shown) -->
+          <div class="onboarding-step" id="stepDaysSelection">
+            <h2 class="step-title" id="daysSelectionTitle">How many days do you want to work on this week?</h2>
+            <p class="step-desc">The remaining days of the week will be rest days. Even 1 goal day is valid.</p>
+
+            <div class="days-summary-badge">
+              <div class="day-col">
+                <span class="num" id="selectedGoalDaysDisplay">-</span>
+                <span class="lbl">Goal Days</span>
+              </div>
+              <div class="day-divider">:</div>
+              <div class="day-col">
+                <span class="num" id="selectedRestDaysDisplay">-</span>
+                <span class="lbl">Rest Days</span>
+              </div>
+            </div>
+
+            <div class="days-button-grid" id="onboardingDaysGrid">
+              <button type="button" class="btn-day-choice" data-days="1">1 Day</button>
+              <button type="button" class="btn-day-choice" data-days="2">2 Days</button>
+              <button type="button" class="btn-day-choice" data-days="3">3 Days</button>
+              <button type="button" class="btn-day-choice" data-days="4">4 Days</button>
+              <button type="button" class="btn-day-choice" data-days="5">5 Days</button>
+              <button type="button" class="btn-day-choice" data-days="6">6 Days</button>
+              <button type="button" class="btn-day-choice" data-days="7">7 Days</button>
+            </div>
+
+            <div class="step-actions split">
+              <button type="button" class="btn-secondary" id="btnBackDaysSelection">Back</button>
+              <button type="button" class="btn-primary" id="btnGenerateInitialGoals" disabled>Generate Goals</button>
+            </div>
+          </div>
+
+          <!-- Step 7: Goal Approval (User must approve before finalizing. Cannot change after!) -->
+          <div class="onboarding-step" id="stepGoalApproval">
+            <h2 class="step-title">Review your weekly goals</h2>
+            <p class="step-desc">Review your goals for the week. Once approved, they cannot be changed for the week.</p>
+
+            <div class="approval-goals-list" id="approvalGoalsContainer"></div>
+
+            <div class="approval-retry-row">
+              <button type="button" class="btn-text-action" id="btnRetryGoals">⟳ Retry / Generate Different Goals</button>
+            </div>
+
+            <div class="step-actions split">
+              <button type="button" class="btn-secondary" id="btnBackGoalApproval">Back</button>
+              <button type="button" class="btn-primary" id="btnApproveAndStart">Approve Goals & Start Week</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SCREEN 2: MAIN COMPANION SCREEN            -->
+      <!-- ========================================== -->
+      <section class="screen main-screen" id="mainScreen" style="display: none;">
+        
+        <!-- Top App Bar: Menu (Left), Day Status Toggle (Center), Streak (Right) -->
+        <header class="main-top-bar">
+          <button type="button" class="icon-button" id="btnOpenMenu" aria-label="Open menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+
+          <!-- Day Status Toggle -->
+          <div class="day-toggle-container">
+            <div class="day-status-switch" id="dayStatusSwitch">
+              <button type="button" class="toggle-side" id="toggleGoalDay" data-mode="goal">Goal Day</button>
+              <button type="button" class="toggle-side" id="toggleRestDay" data-mode="rest">Rest Day</button>
+            </div>
+          </div>
+
+          <!-- Streak Count Badge -->
+          <div class="streak-pill" id="streakBadge">
+            <span class="streak-fire">🔥</span>
+            <span class="streak-digit" id="displayStreak">0</span>
+          </div>
+        </header>
+
+        <!-- Day Tracker Bar: Day X/7 | Goals left: Y | Rest days left: Z -->
+        <div class="week-progress-tracker-bar">
+          <span class="tracker-segment day-tag" id="currentDayLabel">Day 1/7</span>
+          <span class="tracker-segment">Goals left: <strong id="goalsLeftCount">0</strong></span>
+          <span class="tracker-segment">Rest days left: <strong id="restDaysLeftCount">0</strong></span>
+        </div>
+
+        <!-- Center Top: Daily Goal Card -->
+        <section class="daily-goal-section" id="dailyGoalSection">
+          <!-- Active Goal Card -->
+          <div class="goal-display-card" id="goalCard" role="button" tabindex="0" title="Click to swap with other remaining goals">
+            <div class="goal-card-top">
+              <span class="goal-index" id="goalIndexText">Goal 1 of 3</span>
+              <span class="swap-hint">Click to swap ⇄</span>
+            </div>
+            <h3 class="goal-card-title" id="goalCardTitle">Daily Goal</h3>
+            <p class="goal-card-desc" id="goalCardDesc">Goal description</p>
+            
+            <div class="goal-card-footer">
+              <span class="goal-duration-tag" id="goalDurationTag">15 mins</span>
+              <button type="button" class="btn-check-goal" id="btnCheckGoal">
+                <span class="check-box" id="goalCheckBox"></span>
+                <span class="check-text" id="goalCheckText">Mark as completed</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Rest Day Display Card (when day is set to Rest Day) -->
+          <div class="rest-display-card" id="restCard" style="display: none;">
+            <div class="rest-badge" id="restBadgeTitle">Rest Day Active</div>
+            <h3 class="rest-title" id="restCardMainTitle">Today is a rest day</h3>
+            <p class="rest-desc" id="restCardMainDesc">Take your time to recharge. Your streak is completely safe.</p>
+          </div>
+        </section>
+
+        <!-- Center: Crocodile Character on Blank Background -->
+        <section class="crocodile-center-stage">
+          <div class="croco-character-container" id="crocoCharacterBox" role="button" tabindex="0">
+            <div class="croco-svg-wrapper" id="crocoSvgWrapper"></div>
+          </div>
+
+          <!-- Companion Dialogue Speech Bubble -->
+          <div class="croco-dialogue-bubble" id="crocoSpeechBubble">
+            <span class="bubble-speaker-name" id="speechCrocoName">Crocodile</span>
+            <p class="bubble-quote-text" id="speechQuoteText">"Let's move at a comfortable pace."</p>
+          </div>
+        </section>
+
+        <!-- Bottom Action Bar: Minimal (Journal & Next Day) -->
+        <footer class="main-bottom-bar">
+          <button type="button" class="bottom-btn" id="btnOpenJournal">
+            <span>📖</span> Journal
+          </button>
+          <button type="button" class="bottom-btn primary" id="btnNextDay">
+            <span>Next Day</span> →
+          </button>
+        </footer>
+
+      </section>
+
+      <!-- ========================================== -->
+      <!-- MODAL: SWAP DAILY GOAL                     -->
+      <!-- ========================================== -->
+      <div class="modal-layer" id="modalSwapGoal" style="display: none;">
+        <div class="modal-sheet">
+          <div class="modal-top">
+            <h3>Choose Today's Goal</h3>
+            <button type="button" class="btn-close-modal" id="btnCloseSwapModal">&times;</button>
+          </div>
+          <div class="modal-content">
+            <p class="modal-sub">Pick from your approved weekly goals for today:</p>
+            <div class="swap-goals-list" id="swapGoalsList"></div>
+            <div class="modal-action-bottom">
+              <button type="button" class="btn-secondary full-w" id="btnBackFromSwap">Go back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- MODAL: MORNING CHECK-IN (Next Day Flow)    -->
+      <!-- ========================================== -->
+      <div class="modal-layer" id="modalMorningCheckin" style="display: none;">
+        <div class="modal-sheet dialog-sheet">
+          <div class="modal-top">
+            <h3 id="checkinDialogSpeaker">Morning Check-in</h3>
+            <button type="button" class="btn-close-modal" id="btnCloseCheckin">&times;</button>
+          </div>
+          <div class="modal-content">
+            <div id="checkinQuestionsContainer"></div>
+            <div class="modal-action-bottom" style="margin-top:12px;">
+              <button type="button" class="btn-secondary full-w" id="btnBackFromCheckin">Go back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- MODAL: WEEKLY REVIEW & REPORT              -->
+      <!-- ========================================== -->
+      <div class="modal-layer" id="modalWeekReview" style="display: none;">
+        <div class="modal-sheet">
+          <div class="modal-top">
+            <h3 id="weekReviewModalTitle">Weekly Review & Report</h3>
+            <button type="button" class="btn-close-modal" id="btnCloseWeekReview">&times;</button>
+          </div>
+          <div class="modal-content">
+            <!-- Review Step 0: Weekly Report Summary -->
+            <div class="review-block" id="revReportBlock">
+              <p class="review-q">Weekly Report</p>
+              <div class="weekly-report-card" id="reviewWeeklyReportSummary"></div>
+              <p class="review-sub-text">Let's reflect on this week and plan your next routine.</p>
+              <div class="step-actions split">
+                <button type="button" class="btn-secondary" id="btnBackFromReviewStart">Go back</button>
+                <button type="button" class="btn-primary" id="btnStartFeedback">Start Review →</button>
+              </div>
+            </div>
+
+            <!-- Review Q1 -->
+            <div class="review-block" id="revQ1Block" style="display: none;">
+              <p class="review-q">1. How well were you able to keep up with the given itinerary/goals?</p>
+              <div class="bubble-cloud" id="revQ1Choices">
+                <button type="button" class="choice-bubble" data-ans="easy">Felt easy and natural</button>
+                <button type="button" class="choice-bubble" data-ans="balanced">Comfortable challenge</button>
+                <button type="button" class="choice-bubble" data-ans="stretched">A bit difficult</button>
+                <button type="button" class="choice-bubble" data-ans="overwhelmed">Hard to keep up</button>
+              </div>
+              <div class="step-actions split">
+                <button type="button" class="btn-secondary" id="btnBackRev1">Back</button>
+                <button type="button" class="btn-primary" id="btnNextRev1" disabled>Next</button>
+              </div>
+            </div>
+
+            <!-- Review Q2 -->
+            <div class="review-block" id="revQ2Block" style="display: none;">
+              <p class="review-q">2. Do you want to maintain, increase, or decrease the difficulty level?</p>
+              <div class="bubble-cloud" id="revQ2Choices">
+                <button type="button" class="choice-bubble" data-ans="maintain">Maintain the same level</button>
+                <button type="button" class="choice-bubble" data-ans="increase">Increase difficulty slightly</button>
+                <button type="button" class="choice-bubble" data-ans="decrease">Decrease difficulty</button>
+              </div>
+              <div class="step-actions split">
+                <button type="button" class="btn-secondary" id="btnBackRev2">Back</button>
+                <button type="button" class="btn-primary" id="btnNextRev2" disabled>Next</button>
+              </div>
+            </div>
+
+            <!-- Review Q3 -->
+            <div class="review-block" id="revQ3Block" style="display: none;">
+              <p class="review-q">3. How do you feel about your habit/activity that week?</p>
+              <div class="bubble-cloud" id="revQ3Choices">
+                <button type="button" class="choice-bubble" data-ans="proud">Proud of my effort</button>
+                <button type="button" class="choice-bubble" data-ans="in_tune">More in tune with my body</button>
+                <button type="button" class="choice-bubble" data-ans="patient">Learning to go at my own pace</button>
+                <button type="button" class="choice-bubble" data-ans="searching">Still finding my rhythm</button>
+              </div>
+              <div class="step-actions split">
+                <button type="button" class="btn-secondary" id="btnBackRev3">Back</button>
+                <button type="button" class="btn-primary" id="btnNextRev3" disabled>Next</button>
+              </div>
+            </div>
+
+            <!-- Review Q4: Enter Goal Days & Rest Days for next week -->
+            <div class="review-block" id="revQ4Block" style="display: none;">
+              <p class="review-q">4. How many goal days and rest days do you want this upcoming week?</p>
+              <div class="days-summary-badge">
+                <div class="day-col">
+                  <span class="num" id="revGoalDaysDisplay">-</span>
+                  <span class="lbl">Goal Days</span>
+                </div>
+                <div class="day-divider">:</div>
+                <div class="day-col">
+                  <span class="num" id="revRestDaysDisplay">-</span>
+                  <span class="lbl">Rest Days</span>
+                </div>
+              </div>
+              <div class="days-button-grid" id="revDaysGrid">
+                <button type="button" class="btn-day-choice" data-days="1">1 Day</button>
+                <button type="button" class="btn-day-choice" data-days="2">2 Days</button>
+                <button type="button" class="btn-day-choice" data-days="3">3 Days</button>
+                <button type="button" class="btn-day-choice" data-days="4">4 Days</button>
+                <button type="button" class="btn-day-choice" data-days="5">5 Days</button>
+                <button type="button" class="btn-day-choice" data-days="6">6 Days</button>
+                <button type="button" class="btn-day-choice" data-days="7">7 Days</button>
+              </div>
+              <div class="step-actions split">
+                <button type="button" class="btn-secondary" id="btnBackRev4">Back</button>
+                <button type="button" class="btn-primary" id="btnGenerateNextWeekGoals" disabled>Generate New Goals</button>
+              </div>
+            </div>
+
+            <!-- Review Q5: Mandatory View, Review & Approve of Next Week's Goals -->
+            <div class="review-block" id="revApprovalBlock" style="display: none;">
+              <p class="review-q">Review and approve your new goals for next week:</p>
+              <div class="approval-goals-list" id="revApprovalGoalsList"></div>
+              <div class="approval-retry-row">
+                <button type="button" class="btn-text-action" id="btnRetryRevGoals">⟳ Retry / Generate Different Goals</button>
+              </div>
+              <div class="step-actions split">
+                <button type="button" class="btn-secondary" id="btnBackRevApproval">Back</button>
+                <button type="button" class="btn-primary" id="btnApproveNextWeek">Approve Goals & Begin Next Week</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- MODAL: REFLECTION JOURNAL (No fake entries) -->
+      <!-- ========================================== -->
+      <div class="modal-layer" id="modalJournal" style="display: none;">
+        <div class="modal-sheet">
+          <div class="modal-top">
+            <h3>Reflection Journal</h3>
+            <button type="button" class="btn-close-modal" id="btnCloseJournalModal">&times;</button>
+          </div>
+          <div class="modal-content">
+            <p class="modal-sub">Enter your reflections for today. AI does not analyze or use this data.</p>
+            
+            <div class="journal-input-box">
+              <label for="journalText" class="field-label">Today's Reflection</label>
+              <textarea id="journalText" class="text-area" rows="4" placeholder="How did today feel? Write your honest thoughts..."></textarea>
+              <button type="button" class="btn-primary" id="btnSaveReflection" style="margin-top: 10px;">Save Reflection</button>
+            </div>
+
+            <div class="journal-history-section">
+              <h4 class="history-title">Saved Reflections</h4>
+              <div class="journal-entries-container" id="journalEntriesContainer"></div>
+            </div>
+
+            <div class="modal-action-bottom" style="margin-top:14px;">
+              <button type="button" class="btn-secondary full-w" id="btnBackFromJournal">Go back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- DRAWER / MENU                              -->
+      <!-- ========================================== -->
+      <div class="drawer-overlay" id="drawerOverlay"></div>
+      <aside class="side-menu-drawer" id="sideDrawer">
+        <div class="drawer-header">
+          <div class="drawer-user-block">
+            <h3 class="drawer-user-title" id="drawerUserName">User</h3>
+            <span class="drawer-croco-sub" id="drawerCrocoName">Companion</span>
+          </div>
+          <button type="button" class="btn-close-drawer" id="btnCloseDrawer">&times;</button>
+        </div>
+
+        <nav class="drawer-links">
+          <button type="button" class="drawer-link-btn" id="drawerLinkGoals">
+            <span class="icon">📋</span>
+            <div class="text">
+              <span class="label">List of Goals</span>
+              <span class="desc">Approved goals for this week</span>
+            </div>
+          </button>
+
+          <button type="button" class="drawer-link-btn" id="drawerLinkProgress">
+            <span class="icon">📊</span>
+            <div class="text">
+              <span class="label">Progress & Weekly Report</span>
+              <span class="desc">Streak, days log & AI analysis</span>
+            </div>
+          </button>
+
+          <button type="button" class="drawer-link-btn" id="drawerLinkActivities">
+            <span class="icon">🏃</span>
+            <div class="text">
+              <span class="label">Activity List</span>
+              <span class="desc">Available activity options</span>
+            </div>
+          </button>
+
+          <!-- Access Weekly Check-in from Menu anytime -->
+          <button type="button" class="drawer-link-btn highlight" id="drawerLinkWeekReview">
+            <span class="icon">📅</span>
+            <div class="text">
+              <span class="label">Weekly Check-in</span>
+              <span class="desc">Reflect & generate next week's goals</span>
+            </div>
+          </button>
+        </nav>
+      </aside>
+
+      <!-- ========================================== -->
+      <!-- MODAL: LIST OF GOALS (Menu View)           -->
+      <!-- ========================================== -->
+      <div class="modal-layer" id="modalGoalsView" style="display: none;">
+        <div class="modal-sheet">
+          <div class="modal-top">
+            <h3>Weekly Goals List</h3>
+            <button type="button" class="btn-close-modal" id="btnCloseGoalsView">&times;</button>
+          </div>
+          <div class="modal-content">
+            <p class="modal-sub">Approved goals for the current week:</p>
+            <div class="weekly-goals-summary-list" id="weeklyGoalsSummaryList"></div>
+            <div class="modal-action-bottom" style="margin-top:14px;">
+              <button type="button" class="btn-secondary full-w" id="btnBackFromGoalsView">Go back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- MODAL: PROGRESS & DAY-BY-DAY REPORT        -->
+      <!-- ========================================== -->
+      <div class="modal-layer" id="modalProgressView" style="display: none;">
+        <div class="modal-sheet">
+          <div class="modal-top">
+            <h3>Progress & Weekly Report</h3>
+            <button type="button" class="btn-close-modal" id="btnCloseProgressView">&times;</button>
+          </div>
+          <div class="modal-content">
+            <!-- Streak Card -->
+            <div class="progress-metric-card">
+              <span class="metric-label">Current Streak</span>
+              <span class="metric-large"><span id="progStreakVal">0</span> Days</span>
+              <p class="metric-note">Both completed goal days and rest days protect your streak.</p>
+            </div>
+
+            <!-- Weekly Balance -->
+            <div class="progress-metric-card">
+              <span class="metric-label">Weekly Balance</span>
+              <div class="stat-line">
+                <span>Goal Days Completed:</span>
+                <strong><span id="progGoalsDoneVal">0</span> / <span id="progGoalsTotalVal">3</span></strong>
+              </div>
+              <div class="stat-line">
+                <span>Rest Days Remaining:</span>
+                <strong><span id="progRestLeftVal">4</span></strong>
+              </div>
+            </div>
+
+            <!-- Day-by-Day History Report (Day 1 was goal day, Day 2 was rest day...) -->
+            <div class="progress-metric-card">
+              <span class="metric-label">Weekly Day-by-Day Log</span>
+              <div class="daily-history-list" id="progDailyHistoryList"></div>
+            </div>
+
+            <!-- AI Analysis strictly here -->
+            <div class="progress-metric-card ai-card">
+              <span class="metric-label">AI Quantified Analysis</span>
+              <p class="ai-text" id="progAiText">
+                Quantified health tracking indicates a beginner baseline. Pacing with flexible rest days maintains habit adherence without physical fatigue or burnout.
+              </p>
+              <div class="tracker-metrics-sub">
+                <span>Resting HR: 68 bpm</span> • <span>Steps: 4,320/day</span> • <span>Sleep: 78%</span>
+              </div>
+            </div>
+
+            <div class="modal-action-bottom" style="margin-top:14px;">
+              <button type="button" class="btn-secondary full-w" id="btnBackFromProgress">Go back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- MODAL: ACTIVITY LIST (Available options)   -->
+      <!-- ========================================== -->
+      <div class="modal-layer" id="modalActivitiesView" style="display: none;">
+        <div class="modal-sheet">
+          <div class="modal-top">
+            <h3>Available Activity List</h3>
+            <button type="button" class="btn-close-modal" id="btnCloseActivitiesView">&times;</button>
+          </div>
+          <div class="modal-content">
+            <p class="modal-sub">The available activity options in the application:</p>
+            <div class="activity-catalog-list" id="activityCatalogList"></div>
+            <div class="modal-action-bottom" style="margin-top:14px;">
+              <button type="button" class="btn-secondary full-w" id="btnBackFromActivities">Go back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toast Feedback -->
+      <div class="toast-notice" id="toastNotice" style="display: none;"></div>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

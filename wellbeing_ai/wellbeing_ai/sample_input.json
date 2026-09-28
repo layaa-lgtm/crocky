@@ -1,0 +1,23 @@
+
+### `sample_input.json`
+
+Replace your current file with:
+
+```json
+{
+  "weekly_focus": "cardio",
+  "planned_work_days": 4,
+  "completed_work_days": 2,
+  "today_choice": "work",
+  "user_data": {
+    "sleep_hours": 7.8,
+    "steps": 8420,
+    "avg_hr": 72,
+    "max_hr": 154,
+    "activity_minutes": 43,
+    "load": 30.96,
+    "spo2": 97
+  },
+  "feedback": null,
+  "outdoor_exercise_accepted": true
+}

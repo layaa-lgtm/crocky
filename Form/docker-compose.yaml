@@ -1,0 +1,16 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    command: --noauth
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=form
+    volumes:
+      - mongodb:/data/db
+
+volumes:
+  mongodb:
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-card">
+            <div class="dashboard-header">
+                <h1>Analytics Dashboard</h1>
+                <p class="subtitle">User Data Overview</p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <span class="material-icons">people</span>
+                    <div class="stat-info">
+                        <h3>Total Users</h3>
+                        <span id="userCount">0</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="material-icons">location_on</span>
+                    <div class="stat-info">
+                        <h3>Countries</h3>
+                        <span id="countryCount">0</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="material-icons">today</span>
+                    <div class="stat-info">
+                        <h3>Today's Entries</h3>
+                        <span id="todayCount">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">
+                    <h2>User List</h2>
+                    <div class="table-actions">
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Search users...">
+                            <span class="material-icons">search</span>
+                        </div>
+                        <button class="refresh-button" onclick="fetchUserData()">
+                            <span class="material-icons">refresh</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="userTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Location</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="form-link">Back to Form</a>
+    </div>
+
+    <!-- User Details Modal -->
+    <div id="userDetailsModal" class="modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2>User Details</h2>
+                <button class="close-button" onclick="closeModal('userDetailsModal')">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteConfirmModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirm Delete</h2>
+                <button class="close-button" onclick="closeModal('deleteConfirmModal')">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this user?</p>
+            </div>
+            <div class="modal-actions">
+                <button class="secondary-button" onclick="closeModal('deleteConfirmModal')">Cancel</button>
+                <button class="delete-button" id="confirmDeleteButton">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/analytics.js"></script>
+</body>
+</html> 
