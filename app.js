@@ -312,6 +312,7 @@
     crocoCharacterBox: document.getElementById('crocoCharacterBox'),
     crocoSvgWrapper: document.getElementById('crocoSvgWrapper'),
     crocoSpeechBubble: document.getElementById('crocoSpeechBubble'),
+    crocoImage: document.getElementById('crocoImage'),
     speechCrocoName: document.getElementById('speechCrocoName'),
     speechQuoteText: document.getElementById('speechQuoteText'),
 
