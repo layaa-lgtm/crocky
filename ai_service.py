@@ -25,16 +25,13 @@ HOST = "127.0.0.1"
 PORT = 8001
 
 ACTIVITY_TO_FOCUS = {
-    "walking": "cardio",
-    "cycling": "cardio",
-    "dancing": "cardio",
-    "nature": "cardio",
-    "yoga": "flexibility",
-    "mobility": "flexibility",
-    "bodyweight": "lower_body_strength",
-    "swimming": "cardio",
+    "cardio": "cardio",
+    "upper_body_strength": "upper_body_strength",
+    "lower_body_strength": "lower_body_strength",
+    "core": "core",
+    "flexibility": "flexibility",
+    "balance": "balance",
 }
-
 
 def choose_focus(activities):
     """Use the first selected frontend activity as the primary AI focus."""

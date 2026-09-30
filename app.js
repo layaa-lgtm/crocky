@@ -112,40 +112,38 @@
   };
 
   const ACTIVITY_OPTIONS = [
-    { id: "walking", name: "Gentle Walking", desc: "Low impact outdoor or indoor strolling at a conversational pace." },
-    { id: "yoga", name: "Stretching & Yoga", desc: "Gentle floor stretches to relieve tension and relax joints." },
-    { id: "bodyweight", name: "Light Bodyweight Moves", desc: "Simple movements like chair stands, wall pushes, and calf raises." },
-    { id: "cycling", name: "Cycling", desc: "Leisure flat-road cycling or stationary pedaling." },
-    { id: "dancing", name: "Dance Movement", desc: "Unhurried movement to favorite music in the living room or kitchen." },
-    { id: "mobility", name: "Mobility & Posture", desc: "Circular releases for shoulders, spine, hips, and neck." },
-    { id: "swimming", name: "Swimming", desc: "Easy floating or smooth laps with zero joint impact." },
-    { id: "nature", name: "Nature Strolls", desc: "Walking on natural trails or green parks." }
-  ];
-
-  const GOAL_POOLS = {
-    walking: [
-      { title: "15-Minute Unhurried Stroll", desc: "Walk at a relaxed pace without rushing. Take in your surroundings.", duration: "15 mins" },
-      { title: "Midday Fresh Air Walk", desc: "A brief walk outdoors to break up your day and stretch your legs.", duration: "12 mins" },
-      { title: "Evening Twilight Walk", desc: "A peaceful walk after sunset to unwind from daily tasks.", duration: "20 mins" },
-      { title: "Morning Light Stroll", desc: "Step outside for a short morning walk to welcome daylight.", duration: "10 mins" }
-    ],
-    yoga: [
-      { title: "Gentle Reclined Floor Stretch", desc: "Restorative leg and back stretches on a comfortable rug.", duration: "15 mins" },
-      { title: "Spine & Shoulder Ease", desc: "Slow shoulder rolls and cat-cow breathing on all fours.", duration: "12 mins" },
-      { title: "Bedtime Wind-Down Stretches", desc: "Relaxing postures to prepare your body for restful sleep.", duration: "10 mins" }
-    ],
-    bodyweight: [
-      { title: "Light Living Room Circuit", desc: "10 chair squats and 8 wall pushes taken at an easy tempo.", duration: "12 mins" },
-      { title: "Gentle Posture Balance", desc: "Single-leg balance holds by a chair and slow heel raises.", duration: "10 mins" },
-      { title: "Easy Standing Movement", desc: "Gentle torso twists, arm reaches, and slow knee lifts.", duration: "15 mins" }
-    ],
-    general: [
-      { title: "Mindful Joint Mobility Flow", desc: "Unhurried circular motions for ankles, wrists, and neck.", duration: "12 mins" },
-      { title: "Gentle Hydration & Walk", desc: "Drink a glass of water followed by an easy 15-minute walk.", duration: "15 mins" },
-      { title: "Slow Full-Body Stretch", desc: "Hold 4 gentle stretches for 30 seconds each without straining.", duration: "10 mins" }
-    ]
-  };
-
+  {
+    id: "cardio",
+    name: "Cardio",
+    desc: "Walking, jogging, cycling, dancing, and other cardiovascular activities."
+  },
+  {
+    id: "upper_body_strength",
+    name: "Upper Body Strength",
+    desc: "Exercises targeting the arms, shoulders, chest, and upper body."
+  },
+  {
+    id: "lower_body_strength",
+    name: "Lower Body Strength",
+    desc: "Exercises targeting the legs, hips, and glutes."
+  },
+  {
+    id: "core",
+    name: "Core",
+    desc: "Exercises that strengthen the abdominal and core muscles."
+  },
+  {
+    id: "flexibility",
+    name: "Flexibility",
+    desc: "Stretching and mobility exercises to improve flexibility."
+  },
+  {
+    id: "balance",
+    name: "Balance",
+    desc: "Exercises that improve stability, coordination, and body control."
+  }
+];
+  
   // =========================================================================
   // 3. APPLICATION STATE & PERSISTENCE
   // =========================================================================
