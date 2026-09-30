@@ -25,63 +25,51 @@
         </div>
 
         <div class="onboarding-card">
-         <!-- Step 1: Activities (Nothing preselected) -->
+          <!-- Step 1: Activities (Nothing preselected) -->
           <div class="onboarding-step active" id="stepActivities">
             <h2 class="step-title">What activities are you interested in?</h2>
-            <p class="step-desc">Select one or more fitness activities.</p>
+            <!-- OOGYBOOGY: Activity questionnaire is intentionally single-choice. -->
+            <p class="step-desc">Select one primary fitness activity.</p>
 
             <div class="bubble-cloud" id="bubbleActivities">
-              <button type="button" class="choice-bubble" data-value="cardio">
-                Cardio
-              </button>
-
-              <button type="button" class="choice-bubble" data-value="upper_body_strength">
-                Upper Body Strength
-              </button>
-
-              <button type="button" class="choice-bubble" data-value="lower_body_strength">
-                Lower Body Strength
-              </button>
-
-              <button type="button" class="choice-bubble" data-value="core">
-                Core
-              </button>
-
-              <button type="button" class="choice-bubble" data-value="flexibility">
-                Flexibility
-              </button>
-
-              <button type="button" class="choice-bubble" data-value="balance">
-                Balance
-              </button>
+              <button type="button" class="choice-bubble" data-value="walking">Cardio</button>
+              <button type="button" class="choice-bubble" data-value="yoga">Upper Body Strength</button>
+              <button type="button" class="choice-bubble" data-value="bodyweight">Lower Body Strength</button>
+              <button type="button" class="choice-bubble" data-value="cycling">Core</button>
+              <button type="button" class="choice-bubble" data-value="dancing">Flexibility</button>
+              <button type="button" class="choice-bubble" data-value="mobility">Balance</button>
+              <!-- OOGYBOOGY: Removed the final two legacy activity choices from the active UI. // OOGAWOOGA
+              <button type="button" class="choice-bubble" data-value="swimming">Swimming</button> // OOGAWOOGA
+              <button type="button" class="choice-bubble" data-value="nature">Nature Strolls</button> // OOGAWOOGA -->
             </div>
 
             <div class="step-actions">
-              <button type="button" class="btn-primary" id="btnNextActivities" disabled>
-                Continue
-              </button>
+              <button type="button" class="btn-primary" id="btnNextActivities" disabled>Continue</button>
             </div>
           </div>
 
-          <!-- Step 2: Why (Nothing preselected) -->
-          <div class="onboarding-step" id="stepWhy">
-            <h2 class="step-title">Why do you want to pursue this activity?</h2>
-            <p class="step-desc">Select your primary reason.</p>
-
-            <div class="bubble-cloud" id="bubbleWhy">
-              <button type="button" class="choice-bubble" data-value="consistency">Build consistency</button>
-              <button type="button" class="choice-bubble" data-value="energy">More daily energy</button>
-              <button type="button" class="choice-bubble" data-value="mental">Clear mental clutter</button>
-              <button type="button" class="choice-bubble" data-value="sleep">Better sleep</button>
-              <button type="button" class="choice-bubble" data-value="pain_free">Move pain-free</button>
-              <button type="button" class="choice-bubble" data-value="reconnect">Reconnect with body</button>
-            </div>
-
-            <div class="step-actions split">
-              <button type="button" class="btn-secondary" id="btnBackWhy">Back</button>
-              <button type="button" class="btn-primary" id="btnNextWhy" disabled>Continue</button>
-            </div>
-          </div>
+          <!-- OOGYBOOGY: Removed introductory "Why" question. Each removed line is retained as a comment with OOGAWOOGA.
+          Step 2: Why (Nothing preselected) OOGAWOOGA
+          <div class="onboarding-step" id="stepWhy"> OOGAWOOGA
+          <h2 class="step-title">Why do you want to pursue this activity?</h2> OOGAWOOGA
+          <p class="step-desc">Select your primary reason.</p> OOGAWOOGA
+          // OOGAWOOGA OOGAWOOGA
+          <div class="bubble-cloud" id="bubbleWhy"> OOGAWOOGA
+          <button type="button" class="choice-bubble" data-value="consistency">Build consistency</button> OOGAWOOGA
+          <button type="button" class="choice-bubble" data-value="energy">More daily energy</button> OOGAWOOGA
+          <button type="button" class="choice-bubble" data-value="mental">Clear mental clutter</button> OOGAWOOGA
+          <button type="button" class="choice-bubble" data-value="sleep">Better sleep</button> OOGAWOOGA
+          <button type="button" class="choice-bubble" data-value="pain_free">Move pain-free</button> OOGAWOOGA
+          <button type="button" class="choice-bubble" data-value="reconnect">Reconnect with body</button> OOGAWOOGA
+          </div> OOGAWOOGA
+          // OOGAWOOGA OOGAWOOGA
+          <div class="step-actions split"> OOGAWOOGA
+          <button type="button" class="btn-secondary" id="btnBackWhy">Back</button> OOGAWOOGA
+          <button type="button" class="btn-primary" id="btnNextWhy" disabled>Continue</button> OOGAWOOGA
+          </div> OOGAWOOGA
+          </div> OOGAWOOGA
+          // OOGAWOOGA OOGAWOOGA
+          -->
 
           <!-- Step 3: Struggle (Nothing preselected) -->
           <div class="onboarding-step" id="stepStruggle">
@@ -196,7 +184,8 @@
           <!-- Step 7: Goal Approval (User must approve before finalizing. Cannot change after!) -->
           <div class="onboarding-step" id="stepGoalApproval">
             <h2 class="step-title">Review your weekly goals</h2>
-            <p class="step-desc">Review your goals for the week. Once approved, they cannot be changed for the week.</p>
+            <!-- OOGYBOOGY: Users can keep preferred goals and regenerate only the unchecked ones. -->
+            <p class="step-desc">Keep the goals you like. Unchecked goals will be regenerated.</p>
 
             <div class="approval-goals-list" id="approvalGoalsContainer"></div>
 
@@ -238,6 +227,7 @@
           <div class="streak-pill" id="streakBadge">
             <span class="streak-fire">🔥</span>
             <span class="streak-digit" id="displayStreak">0</span>
+            <span class="week-number" id="displayWeekNumber">Week 1</span>
           </div>
         </header>
 
@@ -258,15 +248,38 @@
             </div>
             <h3 class="goal-card-title" id="goalCardTitle">Daily Goal</h3>
             <p class="goal-card-desc" id="goalCardDesc">Goal description</p>
+            <!-- OOGYBOOGY: Show today's logged goal time on the active Goal Day card. -->
+            <p class="goal-time-display" id="goalTimeDisplay">Goal time not logged</p>
             
             <div class="goal-card-footer">
               <span class="goal-duration-tag" id="goalDurationTag">15 mins</span>
               <button type="button" class="btn-check-goal" id="btnCheckGoal">
                 <span class="check-box" id="goalCheckBox"></span>
-                <span class="check-text" id="goalCheckText">Mark as completed</span>
+                <!-- OOGYBOOGY: Opens Completed/Tried choices instead of a binary completion toggle. -->
+                <span class="check-text" id="goalCheckText">Update goal status</span>
               </button>
             </div>
+            <!-- OOGYBOOGY: The active goal may be regenerated repeatedly until the user resolves the day. -->
+            <button type="button" class="btn-bonus-generate" id="btnRegenerateGoal">↻ Regenerate Goal</button>
+            <!-- OOGYBOOGY: Bonus goal is generated in the same goal-card area after all required goal days are resolved. -->
+            <button type="button" class="btn-bonus-generate" id="btnGenerateBonusGoal" style="display:none;">＋ Generate Bonus Goal</button>
           </div>
+
+          <div class="progress-metric-card readiness-card" id="readinessCard" hidden>
+            <div id="readinessResult" aria-live="polite"></div>
+          </div>
+          <details class="readiness-demo-controls" id="readinessDemoControls">
+            <summary>Demo scenarios</summary>
+            <p class="metric-note">Sample tracking data</p>
+            <label for="readinessScenario">Preview a scenario</label>
+            <select id="readinessScenario" class="time-select">
+              <option value="auto">Automatic demo</option>
+              <option value="well_recovered">Well recovered</option>
+              <option value="poor_sleep">Poor sleep / heavy recent activity</option>
+              <option value="missing_data">Missing data</option>
+            </select>
+            <p id="readinessDemoStatus" class="metric-note" aria-live="polite"></p>
+          </details>
 
           <!-- Rest Day Display Card (when day is set to Rest Day) -->
           <div class="rest-display-card" id="restCard" style="display: none;">
@@ -275,6 +288,11 @@
             <p class="rest-desc" id="restCardMainDesc">Take your time to recharge. Your streak is completely safe.</p>
           </div>
         </section>
+
+        <!-- OOGYBOOGY: Small goal-time shortcut requested for a start/end time window. -->
+        <div class="goal-time-shortcut-row" id="goalTimeShortcutRow">
+          <button type="button" class="small-menu-btn" id="btnOpenGoalTime" title="This helps us understand your progress better.">⏱ Login Goal Time</button>
+        </div>
 
         <!-- Center: Crocodile Character on Blank Background -->
         <section class="crocodile-center-stage">
@@ -403,9 +421,27 @@
               </div>
             </div>
 
-            <!-- Review Q4: Enter Goal Days & Rest Days for next week -->
-            <div class="review-block" id="revQ4Block" style="display: none;">
-              <p class="review-q">4. How many goal days and rest days do you want this upcoming week?</p>
+            <!-- OOGYBOOGY: Weekly review allows the user to keep or switch activity. Switching resets difficulty to moderate. -->
+            <div class="review-block" id="revQ4ActivityBlock" style="display: none;">
+              <p class="review-q">4. Do you want to continue with the same activity or switch?</p>
+              <div class="bubble-cloud" id="revQ4ActivityChoices">
+                <button type="button" class="choice-bubble" data-activity="walking">Cardio</button>
+                <button type="button" class="choice-bubble" data-activity="yoga">Upper Body Strength</button>
+                <button type="button" class="choice-bubble" data-activity="bodyweight">Lower Body Strength</button>
+                <button type="button" class="choice-bubble" data-activity="cycling">Core</button>
+                <button type="button" class="choice-bubble" data-activity="dancing">Flexibility</button>
+                <button type="button" class="choice-bubble" data-activity="mobility">Balance</button>
+              </div>
+              <p class="review-sub-text" id="reviewActivityChangeNote">Your current activity is selected by default.</p>
+              <div class="step-actions split">
+                <button type="button" class="btn-secondary" id="btnBackRev4Activity">Back</button>
+                <button type="button" class="btn-primary" id="btnNextRev4Activity" disabled>Next</button>
+              </div>
+            </div>
+
+            <!-- Review Q5: Enter Goal Days & Rest Days for next week -->
+            <div class="review-block" id="revQ5Block" style="display: none;">
+              <p class="review-q">5. How many goal days and rest days do you want this upcoming week?</p>
               <div class="days-summary-badge">
                 <div class="day-col">
                   <span class="num" id="revGoalDaysDisplay">-</span>
@@ -427,12 +463,12 @@
                 <button type="button" class="btn-day-choice" data-days="7">7 Days</button>
               </div>
               <div class="step-actions split">
-                <button type="button" class="btn-secondary" id="btnBackRev4">Back</button>
+                <button type="button" class="btn-secondary" id="btnBackRev5">Back</button>
                 <button type="button" class="btn-primary" id="btnGenerateNextWeekGoals" disabled>Generate New Goals</button>
               </div>
             </div>
 
-            <!-- Review Q5: Mandatory View, Review & Approve of Next Week's Goals -->
+            <!-- Review Q6: Mandatory View, Review & Approve of Next Week's Goals -->
             <div class="review-block" id="revApprovalBlock" style="display: none;">
               <p class="review-q">Review and approve your new goals for next week:</p>
               <div class="approval-goals-list" id="revApprovalGoalsList"></div>
@@ -449,6 +485,82 @@
         </div>
       </div>
 
+      <!-- OOGYBOOGY: Goal status modal for Completed/Tried. -->
+      <div class="modal-layer" id="modalGoalStatus" style="display: none;">
+        <div class="modal-sheet dialog-sheet">
+          <div class="modal-top">
+            <h3>How did the goal go?</h3>
+            <button type="button" class="btn-close-modal" id="btnCloseGoalStatus">&times;</button>
+          </div>
+          <div class="modal-content">
+            <div class="checkin-actions-stack">
+              <button type="button" class="btn-checkin-act success" id="btnGoalCompleted">Completed — I stuck to the goal.</button>
+              <button type="button" class="btn-checkin-act" id="btnGoalTried">Tried — I did part of it or a smaller version.</button>
+            </div>
+            <div class="journal-input-box" id="triedFeedbackBox" style="display:none; margin-top:12px;">
+              <label for="triedFeedbackText" class="field-label">What got in the way?</label>
+              <textarea id="triedFeedbackText" class="text-area" rows="3" placeholder="Time management, something came up, difficulty level, energy, or anything else..."></textarea>
+              <button type="button" class="btn-primary" id="btnSaveTriedFeedback" style="margin-top:10px;">Save Tried feedback</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OOGYBOOGY: Goal time modal with two 12-hour inputs. -->
+      <div class="modal-layer" id="modalGoalTime" style="display: none;">
+        <div class="modal-sheet dialog-sheet">
+          <div class="modal-top">
+            <h3>Login Goal Time</h3>
+            <button type="button" class="btn-close-modal" id="btnCloseGoalTime">&times;</button>
+          </div>
+          <div class="modal-content">
+            <!-- OOGYBOOGY: Fixed scrollable selectors keep time values structured for the backend. -->
+            <div class="form-field time-selector-field">
+              <label class="field-label">Start time</label>
+              <div class="time-selector-row">
+                <select id="goalStartHour" class="time-select" aria-label="Start hour">
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                </select>
+                <span>:</span>
+                <select id="goalStartMinute" class="time-select" aria-label="Start minute"><option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select>
+                <select id="goalStartAmPm" class="time-select ampm-select" aria-label="Start AM or PM"><option>AM</option><option>PM</option></select>
+              </div>
+            </div>
+            <div class="form-field time-selector-field">
+              <label class="field-label">End time</label>
+              <div class="time-selector-row">
+                <select id="goalEndHour" class="time-select" aria-label="End hour">
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                </select>
+                <span>:</span>
+                <select id="goalEndMinute" class="time-select" aria-label="End minute"><option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select>
+                <select id="goalEndAmPm" class="time-select ampm-select" aria-label="End AM or PM"><option>AM</option><option>PM</option></select>
+              </div>
+            </div>
+            <div class="modal-action-bottom" style="margin-top:14px;">
+              <button type="button" class="btn-primary full-w" id="btnSaveGoalTime">Save Goal Time</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OOGYBOOGY: Persistent Journal History modal grouped as Week 1, Week 2, etc. -->
+      <div class="modal-layer" id="modalJournalHistory" style="display: none;">
+        <div class="modal-sheet">
+          <div class="modal-top">
+            <h3>Journal History</h3>
+            <button type="button" class="btn-close-modal" id="btnCloseJournalHistory">&times;</button>
+          </div>
+          <div class="modal-content">
+            <p class="modal-sub">Only days where you entered information are shown.</p>
+            <div class="journal-history-container" id="journalHistoryContainer"></div>
+            <div class="modal-action-bottom" style="margin-top:14px;">
+              <button type="button" class="btn-secondary full-w" id="btnBackFromJournalHistory">Go back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- ========================================== -->
       <!-- MODAL: REFLECTION JOURNAL (No fake entries) -->
       <!-- ========================================== -->
@@ -459,7 +571,8 @@
             <button type="button" class="btn-close-modal" id="btnCloseJournalModal">&times;</button>
           </div>
           <div class="modal-content">
-            <p class="modal-sub">Enter your reflections for today. AI does not analyze or use this data.</p>
+            <!-- OOGYBOOGY: Reflection text is retained in Journal History and can be passed as context for future goal generation. -->
+            <p class="modal-sub">Enter your reflections for today. Your saved entries stay in Journal History and may inform future goal generation.</p>
             
             <div class="journal-input-box">
               <label for="journalText" class="field-label">Today's Reflection</label>
@@ -522,7 +635,16 @@
             <span class="icon">📅</span>
             <div class="text">
               <span class="label">Weekly Check-in</span>
-              <span class="desc">Reflect & generate next week's goals</span>
+              <span class="desc">Available on Day 7 only</span>
+            </div>
+          </button>
+
+          <!-- OOGYBOOGY: Journal History sits directly below Weekly Check-in as requested. -->
+          <button type="button" class="drawer-link-btn" id="drawerLinkJournalHistory">
+            <span class="icon">📖</span>
+            <div class="text">
+              <span class="label">Journal History</span>
+              <span class="desc">Week-by-week reflections, Tried days & Missed days</span>
             </div>
           </button>
         </nav>
@@ -583,16 +705,23 @@
               <div class="daily-history-list" id="progDailyHistoryList"></div>
             </div>
 
-            <!-- AI Analysis strictly here -->
-            <div class="progress-metric-card ai-card">
-              <span class="metric-label">AI Quantified Analysis</span>
-              <p class="ai-text" id="progAiText">
-                Quantified health tracking indicates a beginner baseline. Pacing with flexible rest days maintains habit adherence without physical fatigue or burnout.
-              </p>
-              <div class="tracker-metrics-sub">
-                <span>Resting HR: 68 bpm</span> • <span>Steps: 4,320/day</span> • <span>Sleep: 78%</span>
-              </div>
+            <!-- OOGYBOOGY: Requested Weekly analysis block. -->
+            <div class="progress-metric-card analysis-card">
+              <span class="metric-label">Weekly Analysis</span>
+              <div class="ai-text" id="progWeeklyAnalysisText" aria-live="polite">Weekly analysis will appear here.</div>
             </div>
+
+            <!-- OOGYBOOGY: Requested Goal specific analysis block. -->
+            <div class="progress-metric-card analysis-card">
+              <span class="metric-label">Goal-Specific Analysis</span>
+              <div class="goal-analysis-list" id="progGoalSpecificAnalysisList" aria-live="polite"></div>
+            </div>
+
+            <!-- OOGYBOOGY: Removed the old AI Quantified Analysis block as requested. // OOGAWOOGA
+            <div class="progress-metric-card ai-card"> // OOGAWOOGA
+              <span class="metric-label">AI Quantified Analysis</span> // OOGAWOOGA
+              <p class="ai-text" id="progAiText">Quantified analysis removed.</p> // OOGAWOOGA
+            </div> // OOGAWOOGA -->
 
             <div class="modal-action-bottom" style="margin-top:14px;">
               <button type="button" class="btn-secondary full-w" id="btnBackFromProgress">Go back</button>
@@ -626,6 +755,7 @@
     </main>
   </div>
 
+  <script src="readiness_demo.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

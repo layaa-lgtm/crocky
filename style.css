@@ -362,6 +362,23 @@ html, body {
   padding: 12px 14px;
 }
 
+/* OOGYBOOGY: Goal approval cards expose a keep checkbox without changing the existing card layout. */
+.approval-goal-card.selectable {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.approval-goal-checkbox {
+  margin-top: 3px;
+  accent-color: var(--sage-500);
+}
+
+.approval-goal-copy {
+  flex: 1;
+}
+
 .approval-goal-title {
   font-size: 0.94rem;
   font-weight: 700;
@@ -619,6 +636,45 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* OOGYBOOGY: Bonus Day and Login Goal Time controls. */
+.goal-time-shortcut-row {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px 6px;
+}
+
+.small-menu-btn {
+  border: 1px solid var(--border-light);
+  background: var(--cream-50);
+  color: var(--text-muted);
+  border-radius: var(--radius-full);
+  padding: 5px 10px;
+  font-family: var(--font-family);
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-bonus-generate {
+  width: 100%;
+  margin-top: 10px;
+  border: 1.5px dashed var(--accent-purple);
+  background: #f6f1fb;
+  color: var(--accent-purple);
+  border-radius: var(--radius-md);
+  padding: 9px 12px;
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toggle-side.bonus-day-toggle {
+  background: #eeeaf5;
+  color: var(--accent-purple);
+  border-color: var(--accent-purple);
 }
 
 .goal-duration-tag {
@@ -1102,6 +1158,48 @@ html, body {
   line-height: 1.4;
 }
 
+/* OOGYBOOGY: Week-grouped journal history presentation. */
+.journal-history-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.journal-week-section {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+}
+
+.journal-week-section summary {
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.journal-week-section summary span {
+  float: right;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.journal-week-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.journal-empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  padding: 14px;
+}
+
 /* Progress & AI Card */
 .progress-metric-card {
   background: #ffffff;
@@ -1267,6 +1365,12 @@ html, body {
   background: var(--sage-50);
 }
 
+/* OOGYBOOGY: Disabled Weekly Check-in remains visible but cannot be opened before Day 7. */
+.drawer-link-btn:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
 .drawer-link-btn.highlight {
   background: #fbf7f4;
   border-color: rgba(217, 111, 84, 0.35);
@@ -1304,3 +1408,48 @@ html, body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   white-space: nowrap;
 }
+
+
+/* OOGYBOOGY: Daily goal-time display and fixed scrollable time selectors. */
+.week-number {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  opacity: 0.78;
+  margin-left: 2px;
+}
+.goal-time-display {
+  font-size: 0.7rem;
+  color: var(--accent-purple);
+  font-weight: 700;
+  margin: -7px 0 10px;
+}
+.time-selector-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  overflow-x: auto;
+  padding: 5px 2px 9px;
+  -webkit-overflow-scrolling: touch;
+}
+.time-select {
+  min-width: 68px;
+  height: 42px;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: #fff;
+  color: var(--text-main);
+  font: 600 0.85rem var(--font-family);
+  padding: 0 8px;
+}
+.ampm-select { min-width: 76px; }
+.goal-time-shortcut-row[style*="display: none"] { display: none !important; }
+
+.readiness-card { margin-top: 12px; }
+.readiness-card[hidden], .readiness-demo-controls[hidden] { display: none !important; }
+.readiness-card p { margin: 8px 0; font-size: .88rem; }
+.readiness-card button { margin-top: 8px; }
+.readiness-demo-controls { margin: 10px 4px; font-size: .8rem; }
+.readiness-demo-controls summary { cursor: pointer; }
+.readiness-demo-controls label { display: block; margin: 8px 0; }
+.readiness-demo-controls select { width: 100%; font-size: .8rem; }

@@ -18,20 +18,25 @@ AI_DIR = ROOT / "wellbeing_ai"
 # daily_plan imports readiness), so expose that directory exactly as it is.
 sys.path.insert(0, str(AI_DIR))
 
-from daily_plan import create_weekly_goals  # noqa: E402
+from report_adapter import generate_report  # noqa: E402
 
 
 HOST = "127.0.0.1"
 PORT = 8001
 
+# OOGYBOOGY: Keep the existing activity IDs for backend compatibility while mapping the six
+# remaining user-facing activity names to the backend's six supported focus categories.
 ACTIVITY_TO_FOCUS = {
-    "cardio": "cardio",
-    "upper_body_strength": "upper_body_strength",
-    "lower_body_strength": "lower_body_strength",
-    "core": "core",
-    "flexibility": "flexibility",
-    "balance": "balance",
+    "walking": "cardio",
+    "yoga": "upper_body_strength",
+    "bodyweight": "lower_body_strength",
+    "cycling": "core",
+    "dancing": "flexibility",
+    "mobility": "balance",
+    # "swimming": "cardio",  # OOGAWOOGA: removed from the user-facing activity list.
+    # "nature": "cardio",    # OOGAWOOGA: removed from the user-facing activity list.
 }
+
 
 def choose_focus(activities):
     """Use the first selected frontend activity as the primary AI focus."""
@@ -81,6 +86,7 @@ def to_frontend_goal(goal, index):
 
 
 def generate_goals(payload):
+    from daily_plan import create_weekly_goals
     workout_days = max(1, min(7, int(payload.get("workout_days", 1))))
     activities = payload.get("activities") or []
     focus = choose_focus(activities)
@@ -142,7 +148,16 @@ class AIHandler(BaseHTTPRequestHandler):
         try:
             length = int(self.headers.get("Content-Length", "0"))
             payload = json.loads(self.rfile.read(length) or b"{}")
-            result = generate_goals(payload)
+            if self.path == "/api/weekly-report":
+                result = generate_report(payload)
+            elif self.path == "/api/readiness":
+                from readiness_adapter import assess_task
+                result = assess_task(payload)
+            elif self.path == "/api/goals":
+                result = generate_goals(payload)
+            else:
+                self._send_json(404, {"error": "Not found"})
+                return
             self._send_json(200, result)
         except Exception as error:
             self._send_json(500, {"status": "error", "error": str(error)})

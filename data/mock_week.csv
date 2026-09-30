@@ -1,0 +1,8 @@
+date,weekday,planned_exercise,planned_duration_min,planned_intensity,actual_start,actual_end,actual_duration_min,completion_status,ex_avg_hr_bpm,ex_max_hr_bpm,ex_steps_in_window,ex_active_kcal,ex_load,ex_min_spo2_pct,ex_hr_recovery_1min_bpm,sleep_hrs_prev_night,resting_hr_bpm,hrv_rmssd_ms,daily_steps,activity_min,daily_load,daily_avg_spo2_pct
+2026-09-23,Wed,Low impact step jacks,20,low,07:12,07:31,19,completed,107,112,1720,73,23,95,18,7.2,69,40,6010,43,57,96.2
+2026-09-24,Thu,Brisk walking,25,moderate,07:05,07:30,25,completed,119,126,2800,126,48,95,20,7.0,68,41,7180,51,83,96.1
+2026-09-25,Fri,Light dancing,30,moderate,07:20,07:49,29,completed,117,123,2900,145,54,95,21,7.4,67,43,7920,58,94,96.7
+2026-09-26,Sat,High knees,15,high,,,0,missed,,,,,,,,7.1,66,44,4380,22,35,96.3
+2026-09-27,Sun,Low impact knee lifts,30,moderate,08:40,08:58,18,shortened,123,128,1900,99,41,94,19,7.3,68,39,5520,35,70,96.0
+2026-09-28,Mon,Low impact side-steps,30,moderate,06:55,07:26,31,completed,120,126,3300,168,66,95,22,7.1,66,43,8540,62,108,96.2
+2026-09-29,Tue,Jogging,35,moderate,07:08,07:43,35,completed,136,142,5150,253,129,94,26,7.4,64,46,10230,74,170,96.8

@@ -2,11 +2,13 @@ import joblib
 import numpy as np
 import pandas as pd
 from pathlib import Path
+from functools import lru_cache
 
 
 MODEL_PATH = Path(__file__).parent / "models" / "readiness_model.pkl"
 
 
+@lru_cache(maxsize=1)
 def _load_model():
     if not MODEL_PATH.exists():
         return None
@@ -138,42 +140,13 @@ def _ml_readiness(data):
     medians = package["medians"]
 
     row = {}
-
     for feature in features:
-
-        if feature == "sleep_hours":
-            value = data.get("sleep_hours")
-
-        elif feature == "energy":
-            value = data.get("energy")
-
-        elif feature == "steps":
-            value = data.get("steps")
-
-        elif feature == "avg_hr":
-            value = data.get(
-                "avg_hr",
-                data.get("resting_heart_rate")
-            )
-
-        elif feature == "activity_minutes":
-            value = data.get("activity_minutes")
-
-        elif feature == "load":
-            value = data.get(
-                "load",
-                data.get("load_7d")
-            )
-
-        elif feature == "spo2":
-            value = data.get("spo2")
-
-        else:
-            value = None
-
-        if value is None:
+        # Use the exact training schema, including personal-baseline deviations.
+        # Activity-average HR and daily load are not interchangeable with resting
+        # HR or seven-day load. Missing features use saved training medians.
+        value = data.get(feature)
+        if value is None or not np.isfinite(float(value)):
             value = medians.get(feature, 0)
-
         row[feature] = value
 
     input_df = pd.DataFrame(
