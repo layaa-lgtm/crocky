@@ -95,19 +95,19 @@
 
   const DIALOGUES = {
     happy: [
-      "You're chasing your goals! I'm so inspired!",
-      "Every small effort adds up. Take it at your own steady pace.",
-      "Showing up for yourself today is something to feel good about."
+      "You're chasing your goals! I'm so inspired.",
+      "Goaaaal :D That's a win in my books :)",
+      "You did it!! You're awesome <3"
     ],
     rest: [
-      "I'm choosing to rest today and that's okay.",
-      "Resting is part of the work, not something to feel guilty over.",
-      "Recharging my energy today so I can be ready for tomorrow."
+      "I'm choosing to rest today, and I'm proud of that.",
+      "To rest is time for myself, and time on myself is always time well spent.",
+      "zzz...(I'm showing up even now!) zzz..."
     ],
     dull: [
-      "I wish I didn't miss that day. But I want to try again tomorrow.",
-      "It is okay to start a new streak. An honest small streak is better than a dishonest long one.",
-      "Yesterday slipped away, but today is right in front of us. Let's complete a goal."
+      "My best looks different every day. What can I do today?",
+      "A new slate! I can do this!!",
+      "Yesterday slipped away, but today is here. I'm gonna make it count."
     ]
   };
 
