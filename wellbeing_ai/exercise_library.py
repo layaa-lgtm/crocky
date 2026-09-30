@@ -9,7 +9,7 @@ EXERCISE_LIBRARY = {
 
         "easy": [
             {
-                "name": "Easy jogging",
+                "name": "Jogging",
                 "type": "cardio",
                 "environment": "outdoor",
                 "duration_minutes": 15,
@@ -23,7 +23,7 @@ EXERCISE_LIBRARY = {
                 "equipment_required": False,
             },
             {
-                "name": "Easy outdoor walking",
+                "name": "Outdoor walking",
                 "type": "cardio",
                 "environment": "outdoor",
                 "duration_minutes": 20,
@@ -58,7 +58,7 @@ EXERCISE_LIBRARY = {
                 "equipment_required": False,
             },
             {
-                "name": "Easy cycling",
+                "name": "Cycling",
                 "type": "cardio",
                 "environment": "outdoor",
                 "duration_minutes": 15,
@@ -72,7 +72,7 @@ EXERCISE_LIBRARY = {
                 "equipment_required": False,
             },
             {
-                "name": "Easy stair walking",
+                "name": "Stair walking",
                 "type": "cardio",
                 "environment": "indoor",
                 "duration_minutes": 10,
