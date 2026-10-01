@@ -2,16 +2,21 @@ ASYNC’26 — Technical README
 Project Name
 Crocky — An AI-Powered Adaptive Wellness & Lifestyle Companion!
 
-1. Context & Overview
 Elevator Pitch & Value Proposition
+
 Most wellness and lifestyle applications are rigid and heavily focused on numerical targets, fixed schedules, daily streaks, and continuous performance. This can be particularly overwhelming for beginners who do not know where to start, what activities are appropriate for them, or how to remain consistent without feeling pressured.
+
 Crocky is an AI-powered adaptive wellness and lifestyle companion designed specifically for beginners. It combines tracked activity data, wearable data, user reflections, flexible weekly planning, and AI-driven analysis to help users build sustainable wellness habits without rigid daily pressure.
+
 The application allows users to choose how many days they want to work toward each week, making rest an intentional part of the routine rather than treating it as a failure.
+
 The core experience combines:
 ML-based readiness estimation using tracked user data.
 Adaptive AI that uses the readiness score to adjust the difficulty of the user's recommended goal.
 General Weekly AI that identifies broad changes across the user's week.
+
 Goal-Specific Weekly AI that examines metrics recorded around the user's actual logged exercise time to identify activity-specific weekly trends.
+
 User reflections and feedback that help the system understand how activities felt to the user.
 A compassionate crocodile companion that provides an approachable and beginner-friendly interaction experience.
 Flexible weekly goals and rest days instead of rigid daily schedules.
@@ -26,24 +31,28 @@ Should today's goal be easier based on my recent data?
 What has changed in my wellbeing over the week?
 Are there any patterns around the activities I have been doing?
 What happens if I need a rest day?
+
 Core Features
 Adaptive Exercise Planning
 The application uses the user's selected goal, intensity, previous performance, feedback, and ML-estimated readiness to determine an appropriate activity.
+
 Flexible Weekly Planning
 Users choose how many days they want to work toward each week. Rest days are incorporated into the weekly plan rather than being treated as failures.
+
 User Reflections
 After activities, users can provide feedback on how difficult the activity felt. This provides an additional input for future recommendations.
+
 Three AI/ML Components
 Crocky's intelligence is divided into distinct components with different responsibilities:
 ML Readiness Estimator — calculates a readiness score from tracked data.
 Adaptive AI — reads the readiness score and adjusts the recommended goal/difficulty accordingly.
 Weekly Analysis AIs — two separate analysis systems provide general weekly trends and goal-specific weekly trends.
+
 Crocodile Companion
 Crocky provides a cozy, approachable companion experience designed around flexibility, self-acceptance, and reflection rather than pressure.
 
 Demo Screenshots & Media
 Demo Video: https://youtu.be/nPrNrJAtoWE?si=czhcUxtV7MK9DcLN
-Screenshots: 
 
 2. Architecture & System Design
 Architecture
@@ -70,6 +79,7 @@ The model produces a readiness score representing the user's current exercise re
 Adaptive AI
 The Adaptive AI does not calculate the readiness score itself.
 Instead, it receives the readiness score from the ML readiness estimator and uses it as an input when deciding the appropriate difficulty/goal for the user's activity.
+
 For example, a lower readiness score can cause the system to assign an easier goal, while a higher readiness score allows the system to consider a more challenging goal.
 The Adaptive AI also considers relevant user context such as:
 Selected goal
@@ -85,6 +95,7 @@ Step count increased.
 Activity consistency changed.
 Other tracked metrics changed over the course of the week.
 This analysis gives the user a high-level understanding of how their overall week changed.
+
 Goal-Specific Weekly AI
 The Goal-Specific Weekly AI is separate from the General Weekly AI.
 It focuses on the user's logged exercise time and examines the tracked metrics associated with that period.
@@ -123,8 +134,6 @@ Repeated activity-specific patterns are identified.
 Both analyses are displayed in the Progress & Weekly Report, with the general analysis shown first.
 
 Documentation Links
-Documentation
-Link
 Repository
 GitHub https://github.com/layaa-lgtm/crocky
 Demo Video
@@ -163,7 +172,6 @@ Git
 GitHub
 VS Code
 
-Step-by-Step Installation
 Step-by-Step Installation
 Install Python and ensure it is available in your terminal.
 Download and extract the Crocky project ZIP.
