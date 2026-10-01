@@ -1,9 +1,33 @@
-
 EXERCISE_LIBRARY = {
+
+    # =========================================================================
+    # CARDIO
+    # =========================================================================
 
     "cardio": {
 
         "easy": [
+            {
+                "name": "Jogging",
+                "type": "cardio",
+                "environment": "outdoor",
+                "duration_minutes": 15,
+                "equipment_required": False,
+            },
+            {
+                "name": "Low-impact knee lifts",
+                "type": "cardio",
+                "environment": "indoor",
+                "duration_minutes": 12,
+                "equipment_required": False,
+            },
+            {
+                "name": "Outdoor walking",
+                "type": "cardio",
+                "environment": "outdoor",
+                "duration_minutes": 20,
+                "equipment_required": False,
+            },
             {
                 "name": "Brisk walking",
                 "type": "cardio",
@@ -18,9 +42,65 @@ EXERCISE_LIBRARY = {
                 "duration_minutes": 15,
                 "equipment_required": False,
             },
+            {
+                "name": "High knees",
+                "type": "cardio",
+                "environment": "indoor",
+                "duration_minutes": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Low-impact side steps",
+                "type": "cardio",
+                "environment": "indoor",
+                "duration_minutes": 12,
+                "equipment_required": False,
+            },
+            {
+                "name": "Cycling",
+                "type": "cardio",
+                "environment": "outdoor",
+                "duration_minutes": 15,
+                "equipment_required": True,
+            },
+            {
+                "name": "Light dancing",
+                "type": "cardio",
+                "environment": "indoor",
+                "duration_minutes": 15,
+                "equipment_required": False,
+            },
+            {
+                "name": "Stair walking",
+                "type": "cardio",
+                "environment": "indoor",
+                "duration_minutes": 10,
+                "equipment_required": False,
+            },
         ],
 
         "moderate": [
+            {
+                "name": "Tempo walking",
+                "type": "cardio",
+                "environment": "outdoor",
+                "duration_minutes": 25,
+                "equipment_required": False,
+            },
+            {
+                "name": "Low-impact cardio circuit",
+                "type": "cardio",
+                "environment": "indoor",
+                "duration_minutes": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Stair intervals",
+                "type": "cardio",
+                "environment": "indoor",
+                "duration_minutes": 20,
+                "equipment_required": False,
+            },
             {
                 "name": "Walk-jog intervals",
                 "type": "cardio",
@@ -35,9 +115,66 @@ EXERCISE_LIBRARY = {
                 "duration_minutes": 20,
                 "equipment_required": False,
             },
+            {
+                "name": "Jogging",
+                "type": "cardio",
+                "environment": "outdoor",
+                "duration_minutes": 25,
+                "equipment_required": False,
+            },
+            {
+                "name": "High-knee marching",
+                "type": "cardio",
+                "environment": "indoor",
+                "duration_minutes": 15,
+                "equipment_required": False,
+            },
+            {
+                "name": "Cycling",
+                "type": "cardio",
+                "environment": "outdoor",
+                "duration_minutes": 25,
+                "equipment_required": True,
+            },
+            {
+                "name": "Fast stair walking",
+                "type": "cardio",
+                "environment": "indoor",
+                "duration_minutes": 15,
+                "equipment_required": False,
+            },
+            {
+                "name": "Dance cardio",
+                "type": "cardio",
+                "environment": "indoor",
+                "duration_minutes": 25,
+                "equipment_required": False,
+            },
         ],
 
         "challenging": [
+            {
+                "name": "Sprint intervals",
+                "type": "cardio",
+                "environment": "outdoor",
+                "duration_minutes": 25,
+                "equipment_required": False,
+            },
+            {
+                "name": "Jump rope",
+                "type": "cardio",
+                "environment": "indoor",
+                "duration_minutes": 15,
+                "equipment_required": True,
+            },
+            {
+                "name": "Burpee intervals",
+                "type": "cardio",
+                "environment": "indoor",
+                "sets": 4,
+                "reps": 10,
+                "equipment_required": False,
+            },
             {
                 "name": "Jogging intervals",
                 "type": "cardio",
@@ -52,13 +189,119 @@ EXERCISE_LIBRARY = {
                 "duration_minutes": 20,
                 "equipment_required": False,
             },
+            {
+                "name": "Running intervals",
+                "type": "cardio",
+                "environment": "outdoor",
+                "duration_minutes": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Burpees",
+                "type": "cardio",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "High knees",
+                "type": "cardio",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Mountain climbers",
+                "type": "cardio",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Fast cycling",
+                "type": "cardio",
+                "environment": "outdoor",
+                "duration_minutes": 35,
+                "equipment_required": True,
+            },
         ],
     },
 
 
+    # =========================================================================
+    # UPPER BODY STRENGTH
+    # =========================================================================
+
     "upper_body_strength": {
 
         "easy": [
+            {
+                "name": "Standing wall press",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Shoulder blade squeezes",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 12,
+                "equipment_required": False,
+            },
+            {
+                "name": "Wall plank",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Arm circles",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Scapular wall slides",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Seated shoulder raises",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Knee-supported plank",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Incline wall push-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 8,
+                "equipment_required": False,
+            },
             {
                 "name": "Wall push-ups",
                 "type": "strength",
@@ -79,6 +322,31 @@ EXERCISE_LIBRARY = {
 
         "moderate": [
             {
+                "name": "Close-grip incline push-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Bear plank shoulder taps",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Resistance-band chest press",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": True,
+            },
+            
+            {
                 "name": "Incline push-ups",
                 "type": "strength",
                 "environment": "indoor",
@@ -94,9 +362,74 @@ EXERCISE_LIBRARY = {
                 "reps": 10,
                 "equipment_required": False,
             },
+            {
+                "name": "Knee push-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Triceps dips",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Pike push-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Plank shoulder reaches",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Resistance-band rows",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": True,
+            },
         ],
 
         "challenging": [
+            {
+                "name": "Archer push-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 6,
+                "equipment_required": False,
+            },
+            {
+                "name": "Decline diamond push-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 6,
+                "equipment_required": False,
+            },
+            {
+                "name": "Pseudo-planche push-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 6,
+                "equipment_required": False,
+            },
+            
             {
                 "name": "Standard push-ups",
                 "type": "strength",
@@ -106,20 +439,89 @@ EXERCISE_LIBRARY = {
                 "equipment_required": False,
             },
             {
-                "name": "Knee push-ups",
+                "name": "Decline push-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Diamond push-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Pike push-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Triceps dips",
                 "type": "strength",
                 "environment": "indoor",
                 "sets": 3,
                 "reps": 12,
                 "equipment_required": False,
             },
+            {
+                "name": "Plank-to-push-up",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Resistance-band rows",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 4,
+                "reps": 12,
+                "equipment_required": True,
+            },
         ],
     },
 
 
+    # =========================================================================
+    # LOWER BODY STRENGTH
+    # =========================================================================
+
     "lower_body_strength": {
 
         "easy": [
+
+                        {
+                "name": "Seated leg extensions",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Supported side leg raises",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Glute bridge pulses",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 12,
+                "equipment_required": False,
+            },
             {
                 "name": "Chair squats",
                 "type": "strength",
@@ -136,9 +538,73 @@ EXERCISE_LIBRARY = {
                 "reps": 12,
                 "equipment_required": False,
             },
+            {
+                "name": "Calf raises",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 12,
+                "equipment_required": False,
+            },
+            {
+                "name": "Standing leg raises",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Supported reverse lunges",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 6,
+                "equipment_required": False,
+            },
+            {
+                "name": "Wall sit",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Step-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 8,
+                "equipment_required": False,
+            },
         ],
 
         "moderate": [
+            {
+                "name": "Sumo squats",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 12,
+                "equipment_required": False,
+            },
+            {
+                "name": "Lateral lunges",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Glute bridge march",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
             {
                 "name": "Bodyweight squats",
                 "type": "strength",
@@ -155,9 +621,73 @@ EXERCISE_LIBRARY = {
                 "reps": 8,
                 "equipment_required": False,
             },
+            {
+                "name": "Bulgarian split squats",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Single-leg glute bridges",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Step-ups",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Wall sit",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Calf raises",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 15,
+                "equipment_required": False,
+            },
         ],
 
         "challenging": [
+            {
+                "name": "Jumping lunges",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Pistol squat progression",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 6,
+                "equipment_required": False,
+            },
+            {
+                "name": "Single-leg hip thrusts",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
             {
                 "name": "Forward lunges",
                 "type": "strength",
@@ -174,13 +704,81 @@ EXERCISE_LIBRARY = {
                 "reps": 8,
                 "equipment_required": False,
             },
+            {
+                "name": "Jump squats",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Bulgarian split squats",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Walking lunges",
+                "type": "strength",
+                "environment": "outdoor",
+                "sets": 3,
+                "reps": 12,
+                "equipment_required": False,
+            },
+            {
+                "name": "Single-leg squats to chair",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 6,
+                "equipment_required": False,
+            },
+            {
+                "name": "Wall sit",
+                "type": "strength",
+                "environment": "indoor",
+                "sets": 4,
+                "duration_seconds": 45,
+                "equipment_required": False,
+            },
         ],
     },
 
 
+    # =========================================================================
+    # CORE
+    # =========================================================================
+
     "core": {
 
         "easy": [
+            {
+                "name": "Standing core knee lifts",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Bent-knee leg lifts",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Abdominal bracing",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
             {
                 "name": "Dead bug",
                 "type": "core",
@@ -197,9 +795,73 @@ EXERCISE_LIBRARY = {
                 "reps": 8,
                 "equipment_required": False,
             },
+            {
+                "name": "Glute bridge hold",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Knee plank",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Seated knee lifts",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Heel slides",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Pelvic tilts",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
         ],
 
         "moderate": [
+            {
+                "name": "Plank knee drives",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Flutter kicks",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Toe taps",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 12,
+                "equipment_required": False,
+            },
             {
                 "name": "Forearm plank",
                 "type": "core",
@@ -216,9 +878,73 @@ EXERCISE_LIBRARY = {
                 "reps": 12,
                 "equipment_required": False,
             },
+            {
+                "name": "Bicycle crunches",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 12,
+                "equipment_required": False,
+            },
+            {
+                "name": "Leg raises",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Dead bug",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Plank shoulder taps",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Reverse crunches",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
         ],
 
         "challenging": [
+            {
+                "name": "Dragon flag progression",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 6,
+                "equipment_required": False,
+            },
+            {
+                "name": "Hanging knee raises",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": True,
+            },
+            {
+                "name": "Plank to pike",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
             {
                 "name": "Side plank",
                 "type": "core",
@@ -235,13 +961,81 @@ EXERCISE_LIBRARY = {
                 "reps": 20,
                 "equipment_required": False,
             },
+            {
+                "name": "V-ups",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Plank jacks",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 15,
+                "equipment_required": False,
+            },
+            {
+                "name": "Hollow body hold",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Russian twists",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 16,
+                "equipment_required": False,
+            },
+            {
+                "name": "Long-lever plank",
+                "type": "core",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 40,
+                "equipment_required": False,
+            },
         ],
     },
 
 
+    # =========================================================================
+    # FLEXIBILITY
+    # =========================================================================
+
     "flexibility": {
 
         "easy": [
+            {
+                "name": "Wrist and forearm stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Standing calf stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Upper-back stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
             {
                 "name": "Cat-cow stretch",
                 "type": "mobility",
@@ -258,9 +1052,73 @@ EXERCISE_LIBRARY = {
                 "duration_seconds": 30,
                 "equipment_required": False,
             },
+            {
+                "name": "Neck side stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Shoulder stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Standing quad stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Seated hamstring stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Ankle mobility circles",
+                "type": "mobility",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
         ],
 
         "moderate": [
+            {
+                "name": "World's greatest stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Lying spinal twist",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Kneeling quad stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
             {
                 "name": "Standing hamstring stretch",
                 "type": "flexibility",
@@ -277,9 +1135,73 @@ EXERCISE_LIBRARY = {
                 "duration_seconds": 30,
                 "equipment_required": False,
             },
+            {
+                "name": "Figure-four stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Butterfly stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Lunge hip-flexor stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Standing side bend",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Chest stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
         ],
 
         "challenging": [
+            {
+                "name": "Lizard stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 40,
+                "equipment_required": False,
+            },
+            {
+                "name": "Half split stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Low lunge with rotation",
+                "type": "mobility",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
             {
                 "name": "Seated spinal twist",
                 "type": "mobility",
@@ -296,13 +1218,81 @@ EXERCISE_LIBRARY = {
                 "duration_seconds": 30,
                 "equipment_required": False,
             },
+            {
+                "name": "Pigeon pose",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Deep lunge stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
+            {
+                "name": "Extended child's pose",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 40,
+                "equipment_required": False,
+            },
+            {
+                "name": "Seated forward fold",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 40,
+                "equipment_required": False,
+            },
+            {
+                "name": "Cobra stretch",
+                "type": "flexibility",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 30,
+                "equipment_required": False,
+            },
         ],
     },
 
 
+    # =========================================================================
+    # BALANCE
+    # =========================================================================
+
     "balance": {
 
         "easy": [
+            {
+                "name": "Supported side leg balance",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 20,
+                "equipment_required": False,
+            },
+            {
+                "name": "Marching balance",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Heel raises with balance",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
             {
                 "name": "Tandem stance",
                 "type": "balance",
@@ -319,9 +1309,73 @@ EXERCISE_LIBRARY = {
                 "duration_seconds": 30,
                 "equipment_required": False,
             },
+            {
+                "name": "Supported single-leg stand",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 2,
+                "duration_seconds": 15,
+                "equipment_required": False,
+            },
+            {
+                "name": "Weight shifts",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Side-to-side steps",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Toe-to-heel rocking",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Supported heel raises",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 2,
+                "reps": 10,
+                "equipment_required": False,
+            },
         ],
 
         "moderate": [
+            {
+                "name": "Single-leg clock taps",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 6,
+                "equipment_required": False,
+            },
+            {
+                "name": "Tandem squat",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Single-leg toe taps",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
             {
                 "name": "Single-leg stand",
                 "type": "balance",
@@ -338,9 +1392,73 @@ EXERCISE_LIBRARY = {
                 "reps": 6,
                 "equipment_required": False,
             },
+            {
+                "name": "Heel-to-toe walk",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "duration_seconds": 40,
+                "equipment_required": False,
+            },
+            {
+                "name": "Single-leg calf raise",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Lateral leg swings",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
+            {
+                "name": "Clock reach",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 6,
+                "equipment_required": False,
+            },
+            {
+                "name": "Single-leg knee lift",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
         ],
 
         "challenging": [
+            {
+                "name": "Single-leg squat",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 6,
+                "equipment_required": False,
+            },
+            {
+                "name": "Lateral bound and hold",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Single-leg reach matrix",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
             {
                 "name": "Single-leg stand with reach",
                 "type": "balance",
@@ -357,10 +1475,54 @@ EXERCISE_LIBRARY = {
                 "reps": 8,
                 "equipment_required": False,
             },
+            {
+                "name": "Single-leg Romanian deadlift",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Lateral hop and hold",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Single-leg squat reach",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 6,
+                "equipment_required": False,
+            },
+            {
+                "name": "Single-leg hop",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 8,
+                "equipment_required": False,
+            },
+            {
+                "name": "Skater balance",
+                "type": "balance",
+                "environment": "indoor",
+                "sets": 3,
+                "reps": 10,
+                "equipment_required": False,
+            },
         ],
     },
 }
 
+
+# ============================================================================
+# EXERCISE RETRIEVAL FUNCTIONS
+# ============================================================================
 
 def get_exercises(
     focus,
@@ -396,7 +1558,6 @@ def get_exercises(
     ]
 
 
-
 def select_exercise(
     focus,
     difficulty,
@@ -404,13 +1565,6 @@ def select_exercise(
     index=0,
     offset=0,
 ):
-    """
-    Select one exercise for the daily plan.
-
-    offset allows regeneration to start from a different
-    position in the available exercise list.
-    """
-
     exercises = get_exercises(
         focus,
         difficulty,
