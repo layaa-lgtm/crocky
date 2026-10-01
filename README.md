@@ -1,12 +1,6 @@
-ASYNC’26 — Technical README
-Project Name
-Crocky — An AI-Powered Adaptive Wellness & Lifestyle Companion!
-
-Elevator Pitch & Value Proposition
+Crocky is an AI-powered adaptive wellness and lifestyle companion designed specifically for beginners. It combines tracked activity data, wearable data, user reflections, flexible weekly planning, and AI-driven analysis to help users build sustainable wellness habits without rigid daily pressure.
 
 Most wellness and lifestyle applications are rigid and heavily focused on numerical targets, fixed schedules, daily streaks, and continuous performance. This can be particularly overwhelming for beginners who do not know where to start, what activities are appropriate for them, or how to remain consistent without feeling pressured.
-
-Crocky is an AI-powered adaptive wellness and lifestyle companion designed specifically for beginners. It combines tracked activity data, wearable data, user reflections, flexible weekly planning, and AI-driven analysis to help users build sustainable wellness habits without rigid daily pressure.
 
 The application allows users to choose how many days they want to work toward each week, making rest an intentional part of the routine rather than treating it as a failure.
 
